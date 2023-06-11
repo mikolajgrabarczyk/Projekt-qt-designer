@@ -1,0 +1,1 @@
+# Projekt_qt_designer
