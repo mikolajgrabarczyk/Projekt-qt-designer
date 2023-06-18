@@ -58,9 +58,16 @@ class moja_wtyczka_QGISDialog(QtWidgets.QDialog, FORM_CLASS):
         y  = []
         h  = []                       
         for punkt in aw.selectedFeatures():
+
+            wsp_x = punkt.geometry().asPoint().x()
+            wsp_y = punkt.geometry().asPoint().y()
+
+            x.append(wsp_x)
+            y.append(wsp_y)
+
             x.append(punkt['x92'])
             y.append(punkt['y92'])
-            h.append(punkt['h']) 
+            h.append(punkt['h'])
             nr.append(punkt['nr'])               
             
         if self.radioButton.isChecked() == True and lob == 2:             
